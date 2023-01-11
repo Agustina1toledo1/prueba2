@@ -1,0 +1,181 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    padding: 10px;
+}
+/* letra a
+.logo{
+    color:darkblue;
+    font-size: 70px;
+    font-weight: bold;;
+    font-family: 'Assistant', sans-serif;
+}*/
+.logo img{
+    width: 100px;
+}
+.centrado{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    width: 95%;
+    margin: 0 auto; /*centrar*/
+    /*background: #5560bf;*/
+    
+}
+.entrada{
+    width: 60%;
+}
+
+.texto-entrada{
+    background: radial-gradient(49.87% 71.39% at 4.91% 72.7%, #F77816 3.09%, rgba(236, 159, 48, 0.97) 16.93%, rgba(255, 91, 0, 0.99) 30.29%, rgba(30, 72, 106, 0.88) 30.76%, #1D4769 56.93%, #1D4768 81.25%, #1D4869 100%);
+    height: 85vh;
+    border-radius: 50px;
+    box-shadow: 0px 24px 32px -8px rgb(0 0 0 / 50%);
+    position: relative;
+    margin-top: 0;
+}
+
+.texto-entrada-contenido  {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    right: 5%;
+    bottom: 15%;
+    width: auto;
+    height: auto;
+    background: none;
+    border: 0;
+    color: #FFF;
+    font-size: 32px;
+    resize: none;
+}
+.texto-entrada-contenido::placeholder{
+    color: #FFF;
+}
+.texto-entrada-contenido:focus{
+    outline: none;
+}
+
+.botones-entrada{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    /*;
+    background: #5560bf;*/
+}
+.boton-encriptar, .boton-desencriptar{
+    
+    color: #FFF;
+    border: none;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    margin: auto 15px; 
+    border-radius: 30px;
+    background: url("../img/botones-entrada.png");
+    background-size: 100% 100%;
+    padding: 15px 15px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px rgba(0,0,0,0.5);
+     
+}
+.reglas{
+    margin: 10px 0;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.texto-salida{ 
+    width: 38%;
+    height: 85vh;
+    background: linear-gradient(201.08deg, #1D4769 6.32%, #1D4769 48.97%, rgba(29, 71, 105, 0.95) 91.62%);
+    border-radius: 50px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-left: auto;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
+/*p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    white-space: initial;
+}*/
+.texto-salida-contenido  {
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    right: 5%;
+    bottom: 15%;
+    width: auto;
+    height: auto;
+    background: none;
+    border: none;
+    color: #FFF;
+    font-size: 24px;
+    
+}
+.boton-copiar{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    color: #FFF;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: url("../img/Rectangle\ 13.png");
+    background-size: 100% 100%;
+    padding: 15px 15px;
+    box-shadow: 5px 5px rgba(0,0,0,0.5);
+}
+
+footer hr{
+    margin-top: 10px;
+    border: none;
+    border-bottom: #1D4768;
+}
+
+
+footer .centrado {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 25px 0;
+}
+footer p{
+    padding: 10px;
+    /*border-top: 2px solid silver;
+    border-bottom: 2px solid silver;*/
+    color: rgb(57, 56, 56);
+    font-size: 20px;
+}
+@media screen and (max-width:480px){
+    
+    .entrada, .texto-salida{
+        width: 100%;
+    }
+    /*.texto-salida{
+        margin-top: 10vh;
+    }*/
+    .boton-encriptar, .boton-desencriptar{
+        font-size: 12px;
+    }
+    
+}
+@media (min-width: 768px){
+    form {
+        width: 60%;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <div class="centrado">
+            
+            <h1 class="logo"><img src="img/Logo.png" alt="logo de Alura"></h1>
+            <!--<h1 class="logo">a</h1>-->
+        </div>
+    </header>
+
+    <main>
+        <section class="centrado">
+            <div class="entrada">
+                <div class="texto-entrada" >
+                    <textarea class="texto-entrada-contenido"  name="comentario" placeholder="Ingrese el texto aquí" ></textarea>
+                        
+                    <div class="botones-entrada">
+                        <button class="boton-encriptar">encriptar</button>
+                        <button class="boton-desencriptar">desencriptar</button>
+                    </div>   
+                    
+                     
+                </div> 
+                <p class="reglas">	&excl; Sólo letras minuscula y sin acentos.</p> 
+            </div>
+                           
+            
+
+             
+
+            <div class="texto-salida">
+                <p class="texto-salida-contenido">Ningún mensaje fue encontrado</p>
+                <button class="boton-copiar">Copiar</button>
+            </div>
+             
+        </section>
+            
+    </main>
+    
+    <footer>
+        <hr>
+        <div class="centrado">
+            <p class="footer">AgustinaToledo</p>
+        </div>
+    </footer>
+
+    <script>
+        var textoEntrada =document.querySelector(".texto-entrada-contenido");
+        var textoSalida =document.querySelector(".texto-salida-contenido");
+        //textoSalida.style.whiteSpace= "initial";
+        //textoSalida.style.textOverflow = "ellipsis";
+        function encriptar(){
+            var texto2=textoEntrada.value
+            .replace(/e/g, "enter")
+            .replace(/i/g, "imes")
+            .replace(/us/g, "si")
+            if (texto2.length==0 || texto2==" "){
+                textoSalida.innerHTML="Ningún mensaje fue encontrado"
+            }else{
+                textoSalida.innerHTML=texto2
+            }
+            console.log(texto2.length)
+        }
+        
+        var boton = document.querySelector(".boton-encriptar");
+        boton.onclick = encriptar;
+        
+    </script>
+    
+</body>
+</html>
